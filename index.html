@@ -10,11 +10,11 @@
     <title>Crystal Game!</title>
 </head>
 
-<body>
+<body background="assets/images/Background.jpg" >
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <div class="card bg-dark text-white text-center p-3">
+                <div class="card bg-warning text-danger text-center p-3">
                     <blockquote class="blockquote mb-0">
                         <h1>Crystal Collector</h1>
                     </blockquote>
@@ -23,117 +23,89 @@
         </div>
         <div class="row">
             <div class="col-8">
-                <div class="card">
+                <div class="card bg-info text-white">
                     <div class="card-body">
                         <h3 class="card-title">Instructions</h3>
                         <p class="card-text">You will be given a random number at the start of the game.</p>
-                        <p class="card-text">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                        <p class="card-text">You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+                        <p class="card-text">There are four crystals below. By clicking on a crystal you will add a
+                            specific amount of points to your total score.</p>
+                        <p class="card-text">You win the game by matching your total score to random number, you lose
+                            the game if your total score goes above the random number.</p>
                         <p class="card-text">The value of each crystal is hidden from you until you click on it.</p>
-                        <p class="card-text">Each time when the game starts. the game will change the values of each crystal.</p>
+                        <p class="card-text">Each time when the game starts. the game will change the values of each
+                            crystal.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <div class="card bg-primary text-white text-center p-3">
+                <div class="card bg-success text-white text-center p-3">
                     <blockquote class="blockquote mb-0">
 
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
+                        <div id="randomNumber">
+                            randomNumber between 19-120
+                        </div>
                     </blockquote>
                 </div>
             </div>
             <div class="col-3">
-                <div class="card bg-primary text-white text-center p-3">
+                <div class="card bg-dark text-white text-center p-3">
                     <blockquote class="blockquote mb-0">
-
+                        <div id="result">
+                            you win! / you Lost!
+                        </div>
                         <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
+
                         </footer>
+                        <div id="score">
+                            <h6>
+                                Wins: ++
+                            </h6>
+                            <h6>
+                                Losses: ++
+                            </h6>
+                        </div>
                     </blockquote>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
+                <div class="card bg-secondary text-white text-center p-3">
+                    <img src="assets/images/Herkimer.jpg" height="120px" width="120px">
                 </div>
             </div>
             <div class="col-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
+                <div class="card bg-secondary text-white text-center p-3">
+                    <img src="assets/images/fig2.jpg" height="120px" width="120px">
                 </div>
             </div>
             <div class="col-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
+                <div class="card bg-secondary text-white text-center p-3">
+                    <img src="assets/images/quartz-crystal-point-small_1.jpg" height="120px" width="120px">
                 </div>
             </div>
             <div class="col-2">
-                <div class="card bg-primary text-white text-center p-3">
+                <div class="card bg-secondary text-white text-center p-3">
+                    <img src="assets/images/s14s.jpg" height="120px" width="120px">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card bg-danger text-warning text-center p-3">
                     <blockquote class="blockquote mb-0">
-
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
+                        <h4>Your Total Score is:</h4>
                     </blockquote>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <div class="card bg-primary text-white text-center p-3">
+                <div class="card bg-danger text-warning text-center p-3">
                     <blockquote class="blockquote mb-0">
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-
-                        <footer class="blockquote-footer text-white">
-                            <small>
-                                Someone famous in <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </footer>
+                            <h1>0</h1>
                     </blockquote>
                 </div>
             </div>
