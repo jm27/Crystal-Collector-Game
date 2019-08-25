@@ -1,20 +1,29 @@
 // Create variables to use in game
-var randomNumber;
+var computerScore;
 var crystalOne;
 var crystalTwo;
 var crystalThree;
 var crystalFour;
-// score should start at 0    
-score = 0;
+var win = 0;
+var loss = 0;
+var min = 9;
+var max = 122;
+// Score should start at 0    
+var  score = 0;
 
 // Create random number and save it and console log
-randomNumber = function (min = 9, max = 122) {
-    return Math.floor(Math.random() * (max - min) + min);
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);    
 }
+   computerScore = randomNumber(min, max);
 
-console.log(randomNumber());
+// Assign random number to html and console log
+$("#randomNumber").text(computerScore);
 
-// assign random number to each crystal and console log
+console.log(computerScore);
+
+
+// Assign random number to each crystal and console log
 crystalOne = Math.floor(Math.random() * 12) + 1;
 console.log(crystalOne);
 crystalTwo = Math.floor(Math.random() * 12) + 1;
@@ -24,3 +33,70 @@ console.log(crystalThree);
 crystalFour = Math.floor(Math.random() * 12) + 1;
 console.log(crystalFour);
 
+// Assign each crystal value to images and add when clicked console log
+//var fun = function(){
+//$("#score").text(score);
+//}
+
+//console.log(fun());
+
+$("#imageOne").on("click", function () {
+    console.log("you clicked me!");
+    score = crystalOne + score;
+    console.log(score);
+    $("#score").text(score);
+    compare();
+})
+$("#imageTwo").on("click", function () {
+    console.log("you clicked me!");
+    score = crystalTwo + score;
+    console.log(score);
+    $("#score").text(score);
+    compare();
+})
+$("#imageThree").on("click", function () {
+    console.log("you clicked me!");
+    score = crystalThree + score;
+    console.log(score);
+    $("#score").text(score);
+    compare();
+})
+$("#imageFour").on("click", function () {
+    console.log("you clicked me!");
+    score = crystalFour + score;
+    console.log(score);
+    $("#score").text(score);
+    compare();
+})
+
+
+// Compare our score to random number if statements
+function compare(){
+if(score === computerScore){
+    win++;
+    $("#wins").text("wins:" + win);
+    console.log("you won");
+    reset();
+}
+else if(score > computerScore){
+    loss++;
+    $("#loss").text("losses:" + loss);
+    reset();
+}
+}
+//Re-start game function
+
+function reset(){
+    crystalOne = Math.floor(Math.random() * 12) + 1;
+console.log(crystalOne);
+crystalTwo = Math.floor(Math.random() * 12) + 1;
+console.log(crystalTwo);
+crystalThree = Math.floor(Math.random() * 12) + 1;
+console.log(crystalThree);
+crystalFour = Math.floor(Math.random() * 12) + 1;
+console.log(crystalFour);
+computerScore = randomNumber(min, max);
+score = 0;
+$("#score").text(score);
+$("#randomNumber").text(computerScore);
+}
