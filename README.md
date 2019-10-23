@@ -1,6 +1,6 @@
 # Crystal Collector
 
-# [Game Link!](https://jm27.github.io/unit-4-game/ "Click")
+# [Game Link!](https://jm27.github.io/Crystal-Collector-Game/ "Click")
 
 ## Instructions
 
