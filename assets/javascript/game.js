@@ -68,19 +68,22 @@ $("#imageFour").on("click", function () {
     $("#score").text(score);
     compare();
 })
-
+$("#wins").text("wins:" + win);
+$("#loss").text("losses:" + loss);
 
 // Compare our score to random number if statements
 function compare(){
 if(score === computerScore){
     win++;
     $("#wins").text("wins:" + win);
+    $("#result").text("You WON!!!!");
     console.log("you won");
     reset();
 }
 else if(score > computerScore){
     loss++;
     $("#loss").text("losses:" + loss);
+    $("#result").text("Come On, Try Again!");
     reset();
 }
 }
